@@ -74,5 +74,11 @@ public class Database extends SQLiteOpenHelper {
             }
         }
     }
+    public Cursor queryData(String sql){
+        SQLiteDatabase db = getReadableDatabase();
+
+        return db.rawQuery(sql, null);
+
+    }
 }
 
